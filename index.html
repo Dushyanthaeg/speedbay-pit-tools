@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#161c22" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Kart ID" />
+<link rel="apple-touch-icon" href="data:image/png;base64,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" />
+<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlNwZWVkQmF5IEthcnQgSUQgQ2hlY2siLCAic2hvcnRfbmFtZSI6ICJLYXJ0IElEIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwYzEwMTQiLCAidGhlbWVfY29sb3IiOiAiIzE2MWMyMiIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQUlBQUFEZHZ2dFFBQUFHVlVsRVFWUjQydTJkMjFKVVJ4U0dlMVBlUndTaUhNSmhoQURtS3U4UUpZa2cwWGRSR05GSUVCaUJkNGtIRWpVeHJ4RmpBa2swcDlmWXVhREtvaWlZNmNQdVhxdjMvcjZhTzJkM3o4ejY1bCtyaHdHTGlibFBEWUF2NThxeTVGVUFiL3A0Q1FDQkFJRUFnUUNCQUJ4UFljWndDZ01TQ01RU2lBQUNFZ2pFRW9nQUFoSUlFQWc0eGdNSkJJQkFrTFNGMGNHQUJBSUVBazVoMEVDQjBBZG9ZWUJBZ0VEUXlDR2FJUWhJSU9BWUR5UVFJQkFBQWtIQ0dZZ0pDRWdnRUR5RkVVSEFNUjVvWVlCQWdFQUFDQVFJQkp6Q29CRUM4V2VpZ1JZR0NBUUlCQWdFNEh3S3k0L2IzLzdjL1E1N3R6Nmh0R2tvUmxyem1VanoydS9DdlZ0WEtITnpCZkwyQnBOU0NUU2xWS0RiajEvSFdIYnZKaHJWWGFCSTZxQlJGSUdHbFFsMEo3NDlSK3ppVU0wRVNxWU9HbFVyMEp3T2UzNlIybnIzNWp3ZWVOUFhjSHZFZDBlZ090UVBoM0lWU0UvbGNNaDNCcG9VbTRIdVBQR3YyZTVYODRtWEJWMEMrWlhacWNBSnRvQThmcGpxVjlUM1Y0VmtFdlJNb0ZtSitIbmo0c0ZjampzMlJhQkx5UVZhc2E3bFR0V0ZGTnlhVTFocVlwUVFMYklYeURJRDRsWGFjdVVWbDVhSFFQWFBIbklvbWtDbFNYYXpmVnNuZURDV0laVHd4Y24wcHU0WXY3TnNHdzhyVDk5NFg3NnpQSGZxNWVEeE9WQ3B5WjVaTzNWKzdXNlZ6VG83eTdOZDFqa1docUJqQnJLb2x0VWlOdXRZM2kzTlkwWWdMZkhqV3M2ZTk3Y01QTWp5YzZCS3dvQUlpVDRENldueXBjcGxHWUpVSk5CcVdCS0VYQzY0ZFROT1lUcitRTkNqR3gvSERMZXl5NzZyejM3enZod3ltSUY2RnpqK0NwRDlFQTBJQkFnRWdFQ0FRS0JJb0ZMSDl5Zk92UGJSalpuZ3p3aG1JajAyYmxyK1R2VHFzNFBPMGt5a3hiczh4L2IrUWNqbGtLaUZCY29SY3JuZzFnZ0VVQmVCL0pLQS9HaVFRRDNIRVZjYmV0N2ZaZ0FDTFFKVkVnYWRwUm1iZFN6dlJvQ0ZvK3M3MGUzOWc4N1N0RVZkcDQweDdmM0RzLzdKYnE5RHV3TTg5QkJJRiszOVEwc0o3RjN4dFFkc1dsakNqNTA2aTNZbDEvRjdZWjNGYVQ0cDdIblRlQXByZjNlWTlmcU5vaGdhdTV4NHk3dDI5ZHRlbks3ZjdwekMxSGttdmlZSjFKS1E0M2Y3TzI4dlhzNXhSeElvSWs0VmNxbzk5alQ5R04vZGdNVG1nZElXRmw3Z0xpYUZlME1JdVFnMDJoTGMvdTczZWtOaSt6b2FxVCtGYVM1U2VyazF2NTMwSHVOeDZQaGUyVGxVREkxTzZTalZINHA3V1N2OTAwK3dhYTBFVXU1UTFJcWU5Y1N6Y0tnWVZDUFFFV3VLTmRxS1VOSHV6M2RMdlVQcUJFcmowRkZoUERhcXRxS1dEMEN6UmhvRmlxclJpV0lJT3VTMHRWcUhpc0dSS2FPWXRlZVZhYlQxWmF2Q1hicXNWdm56Q3R3cnRrQ1RXVXo3YTgvLzlQVm1LdEw2bGlzSDd1VzlDd0w1RjhEdlJVL21rUDFHeXUzSlZTQlZPZWRhNHpyWmcwQ3BOYXFaUFlaZmJhNnFlRFptMU04ZUJFcm5VQzN0TWNZVUE3U3dzN25uM3NzMlR5dS8vVHFiV2RsampDa0doaWNRcFlkR0w5NjZPZlRGcE4vbEp5NmtoZFVFMTdyZWUvSDJ2VFN1OG1VSENSUXJoMkpyU2dMVlBJZWFZQThDT1pjNVJxWEQxeFJzbEFna25CWlYyU1BsRURPUTVKcytSdllrN29iRndQQTROdmdXNzEyWVBST1JIa0Q0eWk0Q1hVS2dnQksrOUhSbzgvT0pxRnVIcjI4cjBBVUVDdWErdTBZUHd3cHN1ZVBEK0JveFJGZUFSNTN1djN5WHdOZVFYUkNvbmc0NVhVVUM0WkJxZTQ1bW9JK29mZFVqMFYvdThvMVh1N0xsZ2lTUXppZ2FqK0djUW5zUUtCdUhkTnBqakNrdVhLU0ZSZXRsUDdqM3NvWHhrSFZPdlJ5Qm1xWFJDUWswMjROQTJxTkl1VDNHbUtJZmdaTHd0YnREOW13c2lQMDRvWS8vN2lITmJXTWg2aHRWN0hrVi9SZkhpSWUwVWZSMzFmRWoyVU00eHFlbTJuckwyb05BZVRza2JvOHhwdWova0JZbTFNdCtET3BsRzlkVW5INUlJTGtjQ2pCQWlUMElKTytRSGhXOFc5Z29oVlRRenY1eGwwL0Y3RUVDS1ltaXNRVE9SVW1nOHlTUUdoNjRPL0dOZEE0aEVCclJ3dXFGaHcwUDVOcFpjWDZJQkZLWlE2L2NjK2pxbUloQUkxUkxxMFAvdXRnakV3UUlWQWVOcE94aEJzcGhKTHFxZXNaQW9Pd2RralVNZ2ZKMlNEeWZtSUV5SG9rMGRMYyt2bTJhMTIzOW1EUWFIay94d2VBd2IrdnNXUC9wdi9YUFZMUU9CQUtHYUVBZ1FDQkFJQUJIemhsVDhpb0FDUVJTQ1VRQVFZaEErQU8wTUVBZ1FDRGdHQTlBQWdFQ1FUNHRqQTRHSkJBZ0VPVFp3dWhnd0RFZWFHR0FRSUJBQUs0ekVDTVFrRURBS1F4SUlFQWdBTGNXUmdNREVnZ1FDSEk5aGRIRGdHTTgwTUlBZ1FDQkFCQUlFQWd5NFg4ZisxcjhPU3JBendBQUFBQkpSVTVFcmtKZ2dnPT0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFQTUVsRVFWUjQydTNkMlhwY1J4VUcwRzYrY3c4WkhEekZzcDBZaTNERk94Q21ZRHZrWFVBeTRNUWtOcGJpZDBtUXpSaDREUUlLWVFnRVhrUGNnREhCUTZ1N1R0V3UybXQ5dWsxOFRxbjEvN1hycU5YTHJlMnZMZ0RJWnpvNk9ySUtBQWw5emhJQUtBQUFGQUFBQ2dBQUJRQ0FBZ0JBQVFDZ0FBQlFBQUFvQUFBVUFBQUtBQUFGQUlBQ0FFQUJBS0FBQUNodVdpeDhJQXlBQ1FBQUJRQ0FBZ0JnUUpOSEFBQW1BQUFVQUFBS0FBQUZBTUE0SnMrQUFVd0FBQ2dBQUJRQUFBb0FBQVVBZ0FJQVFBRUFvQUFBaU0wbmdnR1lBQUJRQUFBb0FBQVVBQUFLQUFBRkFFQ1hmQ2c4Z0FrQUFBVUFnQUlBUUFFQW9BQUFVQUFBS0FBQUZBQUFDZ0NBaUh3Z0RFRFdBaEQvQURrNUFnSlFBQUFvQUFBVUFBQUtBQUFGQUlBQ0FFQUJBS0FBQUZBQUFFUTArVk5BQUNZQUFCUUFBQW9BQUFVQWdBSUFvSE0rRVF6QUJBQ0FBZ0JBQVFDZ0FBQlFBQUFvQUFBVUFBQUtBQUFGQUVCRWsvY0JBNWdBQUZBQUFDZ0FBQlFBQU9Qd29mQUFKZ0FBRkFBQXcvT0pZQUFtQUFBVUFBQUtBQUFGQUlBQ0FFQUJBS0FBQUZBQUFDZ0FBQlFBQUFvQUFBVUFnQUlBUUFFQW9BQUFVQUFBRk9JRFlRRFNGb0Q4QjhoWkFQSWZJQ2ZQQUFBVUFBQUtBQUFGQUlBQ0FFQUJBS0FBQUZBQUFDZ0FBQlFBQUFvQUFBVUFnQUlBb0lISkVxVHl2ZmQrdDk1L2VQZU5yMWc5R016eTlNVlhySUs0VndtUXN3QytiQlVHU3Z3UFcvM1RkOSt3a3dBRlFLYmMxd1NnQU1pZSs1b0FGQURaYzE4VGdBSkE5S3NCQ0Y0QUZ4UkErTngvLzhPUmJ1ZnVkelVCS0FDU1JiOGFBQVZBNnVoWEE2QUFTQjM5YWdDYTg3ZUFwTCs3QmhNQVF0QW9BS2tLNEpRQ2FPMzdvdjkvdmFzR29BcEhRTkxmbW9BQ1FOSlpHY2pFRVpDQUM4MXhFSmdBcEwrMUFoU0FSTE5pUUFtT2dBUlpOeHdIUWZFQzJMWUtWZEwvOXhhaFJBZllyMEF4am9Da3Y1VUVCWURNc3A2Z0FKQldWaFVVQUhMSzJvSUNRRUpaWVZBQXlDYnJEQW9BcVdTMW9VdkxVK2U5RDZCb0h2MVVIalh3N3V2ZUh3QW1BT2x2NVlIVlRKYkFmbG0yUWs2T2dGSnNRZ3Vla0NTNVRWQUFkQnlMRmRJdzUxMkRBaUJ1RGxZT3dlUzNELzN5REdBY3JZTHZ3Yi9yYVFHWUFHei9VKzk1TFFnb0FPbWZPdW1zREhSUkFKZXR3cm9aOTRlbUFiZHRpUVpZSW1qSUc4RzYxRXUwaVdBd0FkaitaNDlVeXdVQlRVZldvQi83M2NiWi91dmJPeTA2d01zYm5zQVIwRHFhWk5sKzU1dlpKdGUvMC9RaEJBUzNQT2tJS0h5bTdJOTFqbUVCd1FSQTB2QVN4NkFBN0Y3elptWGwrM0lRQkFwQVNybzdRQUdFMzBobXlNZWE5MmdJQUFVZ0dkMHBvQUNpYmlHelpXSzErelVFd0dkTTNpb1RqdStJdFFVVFFFTDcxN2JkTmFBQUF0azVxSEY2a0RrSDY5eDduZThqS0FDa3Z4VUFCV0Q3ais4bXhPTXpnZk51ZnA4Y2hVMHVhZi9hdG9DR21nWGdGeU9hcDMrOXY4ZTNjM0M0UmozVXZNTDlhNWRYdjhoMWVjMkRDYUJvWWc1OEZ3Lys4NXBOTU90cWpIRWpzQ0hQQUFiZi91OGNIQmJzc0xML3R3Z2pFU2dBakMvcHBpSmdlWExyUzFhaFZkTE50OVd0azlHemJ0WDdYWHd3QVRCc2J4a0ZRQUVRY1FkYU9aVG4rK2ZzMEVFQmpMK1A3djJhTzUwRGpDK2dBRFNXTUFVRlFFWEZ6emVhUi9BY0YrQVVDQlFBZld6QXpRR2dBS2k2c1EwVnU4VXZ4aEFBODVuOFZaUkgycDB6VmNkZTg0N3VidWZnY0UvQllBSkFVUTE4U1lBQ2tQNDZBRkFBN1RoenNHSVF4T1JQbzlkV2FNRjM3NFhlWmU4ZUhPNWR2WnpuMndFbUFBQTZtZ0JzZ1I2eHVmN0lualBKbmU3ZU85eTc2Zy9pWWdKQVJlVzdTRkFBVkdLemFkMUFBUUNnQUFCUUFLeWlvN04xandGQUFRQ2dBQUJRQUFBb0FBQVVBQUFLQUFBRkFJQUNBRUFCQUtBQUV1bm9MNlA1STI2Z0FBQUl4d2ZDVkxWNzc2TzlxNWN5M2ZGUm9YWDdZL3lMQkJNQUFMMFV3TkhDMTJlKzlxN011VW1QZjRXRjdGMjVWT3liMHNWRit2TFYyNWNKQUNDcHlmRm5aVDRTM2tWQ21DTWc2cnArdjh6enpEdXhUNEVLWGw2cEZRTVVBQUFLb0hOaGg0QTdWeTc1N29BQ2tLM3Byck9qOUZkVUtBQnFjNmh0clVBQk1ObzIxcDRhRkFCVk43WkJZcmY0WmRqK2d3S2dndzZ3OXdjRklGSXpYbkNQNmEreFFBRTBNOGY1UnBOUW0ra2ZkZjREQ29EUUhXQWZEUXBBbUFiYTVGWUw1Zm4rb2JtMy8zb0xGb3ZGWkFrR3JxNzVZbFNBd2hnVGdMK0szZWhQMGY5M3F6dlh4ZCs1OHZJODZmL3lyR3RlNWZUZkM5dVhyeU5IUUt1RVhkL1hYL0FXeXY3ZmZFL0JFVkIyMSs5L1BIY2tQZmovWDcvL2NmREVYTzhLQVFXZ0E0NFI1VStPMmliYlpPa1BDaURjaWNHUXdaVHpKTVQ1RHp4VUFENFRMODRROEozVTJYVDlaMVZhMWdzZS9zTkQ0TlcyalZXaXVWSUNKazcvNUJVTENrQU91bXRBQVFBb0FKNnEydWxCdHUxd3RmdDEvZ01LUUNhNlUwQUJCTjVDWmtqR212ZG8rdzhLUUQ2Nk8rRGZsaWZPdm1RVmp1VUhkWlBySnlOdVhhMGhtQUFJbDVYdUNFd0FoSXV3QWJheDFnMU1BTjFya2ltOWI1eWxQeWdBTW5hQVl4OElhSG5pN0VXcnNHNm8vYW5kQ1BLU1ZScHBsY0FFUUFlcE91UjFnZ21BL2dJdTdDYlh5b0FDMEFIcHdzNkNnQUxRQWVsU0w4NkJqd0lBQlpBdStKckVYOHlEZmgwQUNpQnZDRlpJd1BqUGVOVUFLSUM4RytIaU9kamRML2JvQUZBQTJUdGc3VXdjNEZjNWRRQThwZ0RPS0lCeUJmQnp2L1lldFFOZTB3R2dBSFNBR2dBV2k0VjNBb3NZOVF3S0FCMmdBMEFCb0FOMEFOWktBYUFENUZyeVZiSldBL01RV05Eb2FaNyswclZRSmdEa2k0Wk91aXdXYXRRSjRJSlZtUC9INmM4V0lYWlBtNE5YZXJsYUtCTUE4a1ZESjEwS0MyVUNRTXFvNnRRdlVSc2FFd0RyaEl1Zm5PQzVuTG1rVjc5M1d4a0ZnRDFtdlJXcm1UZzUwKzI0ZDYwRHhyQjgzaEZRQ3ovMDg3T2EyNjlkYkxKV3R6UDE5Tm9yZk50dVJnR2dCdWFMNExaTGxDSGdObHhoSGRBMVIwRHRNNDZ3S3pOOFEyOStnell4Q2dBZE1NdWFSQWlYZ1FPdTFLM3BnSDQ1QWhydHAzR1lPZ3kxSU9QMWRQSGx0WlZSQUtpQmt2R2hBL3A2bWVrQUJZQU9LQmtjMFZaamdJeWJkVWwxZ0FKQURSVE9DNk5BUjY4ckhkQlZBWnhXQUlGL1hIOHhiQTNjL3ZiRmZwZml1QmVmN2VYVTZmb29BTlJBM0hUUUFSMjlpblNBQWtBVEZFNkVhQ3ZRUzh3MVdUY2RvQUJRQStXRHdDalF5M0xwQUFWQTBpYVk5WWRmQi9TeVVEb2dlQUdjdHdyOU44RmZJcVhoQlhmdGhSRjVXVkFBbW1DRUgzVWRJUDFSQURTSWdDQS8zcUU2d0xKSWZ3WEFnSlVRL09mWktDRDlVUURvdHV3ZElQMVpuVDhIelNCQzVVNnJGSmIrbUFBd0IyU3NKZW1QQW9DTXgwSFNuelU0QW1KQTJZNkRwRDhLQURKMmdQUm5iWTZBR05ud2p3U2tQd29BdXFtQmdva3AvZG1RSXlER04rUnhrUFJIQVVER0RwRCtGTEY4emhFUWFmd28wbG5RclhVenRQbGQzSkwrQ2dCMFFQMHdsZjRVTFlCVENvQjhOZkRMU0tQQXR5NzBjdG1yWHlwZDhBeUFqRUlGMllxeEx2MlpZd0xZc2dwa25RUCtHcW1UemtlKzFDZGZIZ29BZE1Bc09TdjlVUUNRY1JTUS9zekhNd0NJbFhFUEo3NzBSd0ZBeGc2US9zek5FUkFzNHV5NE5TSW1BSkI2MWdFVEFCZ0ZwRDhtQUJDQ2Jod0ZBS0xRTGFNQVFDQzZXUlFBekJHTEdaS3h1M3YwKzFvS0FPUmozdlRYQVFvQXBHVGV2YjhPVUFBZ0t6T212dzdZblBjQlFJRVlrdjV0bDkwVGJCTUFpTTZNNlc4TzJHUUNPR2NWWUsxSStxVGI5TjhhY3FtN3V5OFRBUFM3aWQ1eTJhR0t0dDlLVmdBZ1RGM3dwcG11QTQ1bCtkeEpSMEN3Y1U3OXFvUGN1ZlhOclNTcjJ0MmRtZ0NnNTFFZ2ZPTGtTZjllK2xnQmdBNlEvck1rdUE1WXhmSlpSMEJRem8xNHVmTk9iK2xmY0EzZmNSWmtBb0NhYVN0MDRqVG9EWE9BQW9ETW0rNk9RbkNPUzlVQkNnQjBRTWIwMXdFS0FIUkE5QkNjKy9KMHdDTjVDQXk1a2pmZ0k0cHFTK1R4akFLQTdEV1FlVFRSQVE5ekJBUXlOOUdWT0F0U0FLQURQa2w3RFRyZ0FVZEFrRHA5V3RWUzgzVndGcVFBUUEwMGlFTHBINFFqSU1nZVFKWGpXUHFIbWdCZXRBclFLSG4vRnFtVHptVzQ1VHEzYVFJQWVncWpDdEVzL1UwQVFOdzVZTDZVbFA0S0FPaWdCb3BucGZTUHlSRVFqTHp2anBEWDBsOEJBQms3UVBwSHRuejJpNDZBSUpBYnZ3NzJTT0FiNS9xOWwwMHVYZ0VBYW1ETkdKWCs4VGtDZ29oQ2hkY2FVUzc5RlFDUXNRT2t2d0lBTW5hQTlPK0lad0RRZ1Y0ZUNVaC9Fd0NRY1JTUS9nb0F5TmdCMGw4QkFCazdRUHAzYXZtTVp3RFFsVGVEdlZPc3ViZWx2d0lBTlNEOU9SWkhRQ0Q0TEVMZUNlQ3NWWUJ1NTRDL0owNS9weGNtQUVpOUJYN1JqV01DQUtPQTlNY0VBSGJFN2hRRkFEckFQYUlBUUFlNE94UUFTRW4zaFlmQU1LcVJIZ3RMZnhNQWtERTBwZitjRThBTEpnQVlkdzc0b084NTRPMnZTMzhUQUpBdlFLVy9DUURJT0FwSWZ4TUFrREZQcGI4Q0FES21xdlJYQUVER2JKWCtDZ0RJbUxEU3Z6SVBnU0dwYUkrRnBYOTkwMkp4WkJVZzVTaHc5czBQUG8xMFJiS29Oa2RBa0xvRElrMGtuL3FPVkxaODVvVXpWZ0V5aTVhOG9XcEpBUUJxUUFjTXlCRVFFQzV6SFFjcEFFQUhNQ05IUUVEbzVIVWNOR01CZkVFQkFQL25yVWcxOEdNZE1BOUhRRUQwekgzTGNaQUNBSFFBQ2dEUUFXektNd0NncytUMVNFQUJBSGxyUUFjVTRRZ0k2Qzl6SFFjVm1nQk9tQUNBbFpQM041SG1nRmZOQVFvQXlOb0Jha0FCQUVZQmpzMHpBS0Q3ekkwMmxIUTBBWnkyQ3NDNnlmdVBHRzNrSk1NRUFPUkxYdW12QUFENXkvRTRBZ0xLYUhJY3BINU1BRURHVVVENkt3QWdZd2RJZndVQVpKOERXSnRuQU1Bc1puMGtvR1pNQUVER1VVRDZLd0FnWXdkSWZ3VUFaT3dBNmE4QWdNNDZRSEFyQU1Bb1lQdXZBQUFkSVAwVkFLQURwTDhDQUhTQTlLOW5PcklHUUYwM1h6MnpXQ3h1cnZaT01SazFuK1hubi9kT1lLQlJFL3oyS1IxdzgydTIvL01Xd0NtckFMVHJnSDgrUHYxdFQrZmxHUURRdEFBZWsvTFNYd0VBS1RwQTNDc0F3Q2hnKzY4QWdLd2RJUDJyOFJBWXdBUUFnQUlBUUFFQW9BQUFVQUFBS0FBQUZBQUFDZ0FBQlFDQUFnQkFBUURRMXVRRDF3Qk1BQUFvQUFCR056a0JBakFCQUtBQUFGQUFBQ2dBQU1ZeGVRWU1ZQUlBUUFFQW9BQUFVQUFBS0FBQUZBQUFDZ0FBQlFDQUFnQWdJSjhJQm1BQ0FFQUJBS0FBQUZBQUFDZ0FBQlFBQUYyYS9CWW9nQWtBQUFVQWdBSUFRQUVBb0FBQVVBQUFLQUFBRkFBQUNnQ0FnQ1p2QkFaSVdnQStFUXdnSjBkQUFBb0FBQVVBZ0FJQVFBRUFvQUFBVUFBQUtBQUFGQUFBd2ZsUWVBQVRBQUFLQUFBRkFJQUNBRUFCQUtBQUFPaVNENFFCTUFFQW9BQUFVQUFBS0FBQUZBQUFDZ0FBQlFDQUFnQWd1TW5id0FCTUFBQW9BQUFVQUFBS0FJQngrRkI0QUJNQUFBb0FBQVVBd0poOEloaUFDUUFBQlFDQUFnQkFBUUNnQUFCUUFBQW9BQUFVQUFBS0FBQUZBSUFDQUVBQkFLQUFBRkFBQUNnQUFCUUFBSVg4Q3hxeGhmTUhSQWdmQUFBQUFFbEZUa1N1UW1DQyIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIn1dfQ==" />
+<title>Kart ID Check</title>
+<style>
+  :root{
+    --bg:#0c1014; --panel:#161c22; --line:#263038; --muted:#8694a0;
+    --green:#1a8f4c; --amber:#c6820a; --red:#c23224; --btn:#30404f;
+    --accent:#8fd0ff;
+    box-sizing:border-box;
+  }
+  *,*::before,*::after{box-sizing:inherit;}
+  html,body{height:100%;margin:0;}
+  body{
+    background:var(--bg);color:#e8eef3;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-tap-highlight-color:transparent;overscroll-behavior:none;
+  }
+  #app{height:100dvh;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+
+  #topbar{
+    flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+    padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top, 0px));
+    background:linear-gradient(180deg,#1f2831,var(--panel));border-bottom:1px solid var(--line);
+    font-size:13.5px;font-weight:800;letter-spacing:1.5px;color:var(--muted);
+    box-shadow:0 2px 10px rgba(0,0,0,.35);position:relative;z-index:5;
+  }
+  #topbar .brand{color:#f2f7fb;display:flex;align-items:center;gap:7px;}
+  #topbar .brand .ic{font-size:17px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4));}
+  #topbar .brand b{font-weight:900;}
+  #topbar .brand small{display:block;font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1.8px;margin-top:1px;}
+
+  main{flex:1 1 auto;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+  .screen{display:none;flex-direction:column;height:100%;}
+  .screen.active{display:flex;}
+
+  /* ---------- SCAN SCREEN ---------- */
+  #screen-scan{position:relative;}
+  #camWrap{
+    position:relative;flex:1 1 auto;min-height:260px;background:#000;overflow:hidden;
+  }
+  #cam{width:100%;height:100%;object-fit:cover;display:block;}
+  #scanFrame{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    pointer-events:none;
+  }
+  #scanFrame .box{
+    width:min(64vw,280px);height:min(64vw,280px);border-radius:18px;
+    border:3px solid rgba(255,255,255,.55);box-shadow:0 0 0 999px rgba(0,0,0,.32);
+  }
+  #camHint{
+    position:absolute;left:0;right:0;bottom:14px;text-align:center;
+    font-size:13px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.6);
+    padding:0 16px;
+  }
+  #camError{
+    position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;
+    gap:12px;background:var(--bg);padding:24px;text-align:center;
+  }
+  #camError.show{display:flex;}
+  #camError p{color:var(--muted);font-size:14px;line-height:1.5;max-width:320px;margin:0;}
+
+  #resultPanel{
+    flex:0 0 auto;padding:16px 14px calc(14px + env(safe-area-inset-bottom,0px));
+    background:var(--panel);border-top:1px solid var(--line);
+    display:flex;flex-direction:column;gap:10px;min-height:150px;justify-content:center;
+    transition:background-color .15s linear;
+  }
+  #resultPanel.ok{background:linear-gradient(180deg,#123a22,var(--panel));}
+  #resultPanel.unknown{background:linear-gradient(180deg,#3a2a12,var(--panel));}
+  #resultIdle{color:var(--muted);font-size:14px;font-weight:600;text-align:center;}
+  #resultKart{font-size:clamp(28px,9vw,42px);font-weight:900;letter-spacing:.5px;text-align:center;}
+  #resultSerial{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:clamp(20px,6vw,28px);font-weight:800;letter-spacing:1px;text-align:center;
+    background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.14);border-radius:10px;
+    padding:10px 12px;word-break:break-all;
+  }
+  #resultSerialLabel{text-align:center;font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--muted);}
+  #scanAgainBtn{display:none;}
+
+  /* ---------- SHARED ---------- */
+  .wrap{padding:16px 14px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:14px;}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:14px;display:flex;flex-direction:column;gap:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.25);
+  }
+  .card h2{margin:0;font-size:13px;font-weight:900;letter-spacing:1.2px;color:var(--muted);}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.4px;}
+  input[type=text], input[type=search]{
+    background:#0e1419;border:1px solid var(--line);border-radius:10px;color:#e8eef3;
+    font-size:17px;font-weight:700;padding:12px 12px;font-family:inherit;width:100%;
+  }
+  input:focus{outline:2px solid var(--accent);outline-offset:1px;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:58px;padding:0 18px;border:2px solid rgba(255,255,255,.06);border-radius:12px;
+    background:var(--btn);color:#fff;font-family:inherit;font-size:18px;font-weight:900;
+    letter-spacing:.6px;cursor:pointer;touch-action:manipulation;width:100%;
+    box-shadow:0 3px 0 rgba(0,0,0,.28),0 1px 3px rgba(0,0,0,.3);
+    transition:transform .08s ease,filter .08s ease,box-shadow .08s ease;
+  }
+  .btn:active{transform:translateY(2px);filter:brightness(1.18);box-shadow:0 1px 0 rgba(0,0,0,.28);}
+  .btn.primary{background:linear-gradient(180deg,#1a74d6,#1259a8);}
+  .btn.green{background:linear-gradient(180deg,#139a3e,#0b6726);}
+  .btn.danger{background:linear-gradient(180deg,#d42a1d,#9c160c);}
+  .btn.small{min-height:42px;font-size:13px;padding:0 12px;border-radius:9px;width:auto;letter-spacing:.3px;box-shadow:0 2px 0 rgba(0,0,0,.28);}
+  .btn .ic{font-size:1.05em;line-height:1;}
+  .linklike{
+    background:none;border:none;color:var(--accent);font-weight:700;font-size:13px;
+    text-decoration:underline;padding:6px;cursor:pointer;
+  }
+
+  .msg{font-size:13px;font-weight:700;min-height:18px;}
+  .msg.ok{color:#8bd9a6;} .msg.warn{color:#e6b45c;} .msg.err{color:#ff8c7c;}
+
+  /* registered kart list */
+  .klist{display:flex;flex-direction:column;gap:8px;}
+  .krow{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:#0e1419;border:1px solid var(--line);border-radius:10px;padding:10px 12px;
+  }
+  .krow .kn{font-weight:900;font-size:16px;min-width:46px;}
+  .krow .ks{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:var(--muted);flex:1 1 auto;}
+  .krow .kt{display:none;}
+  .krow .del{background:none;border:none;color:#ff8c7c;font-size:13px;font-weight:800;cursor:pointer;padding:6px;}
+
+  /* ---------- PRINT SCREEN ---------- */
+  #printGrid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;
+  }
+  .ptile{
+    background:#fff;color:#111;border-radius:10px;padding:10px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+  }
+  .ptile .qr{width:120px;height:120px;}
+  .ptile .label{font-size:13px;font-weight:900;}
+  .ptile .sub{font-size:9px;color:#666;font-family:ui-monospace,monospace;word-break:break-all;}
+
+  /* ---------- TABS ---------- */
+  #tabs{
+    flex:0 0 auto;display:flex;border-top:1px solid var(--line);background:var(--panel);
+    padding-bottom:env(safe-area-inset-bottom, 0px);
+  }
+  #tabs button{
+    flex:1 1 0;background:none;border:none;color:var(--muted);font-family:inherit;
+    font-size:11px;font-weight:800;letter-spacing:.6px;padding:10px 4px 8px;
+    display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;
+  }
+  #tabs button .ic{font-size:19px;}
+  #tabs button.active{color:#fff;}
+  #tabs button.active .ic{filter:drop-shadow(0 0 6px rgba(143,208,255,.5));}
+
+  @media print{
+    #topbar,#tabs,.noprint{display:none !important;}
+    main{overflow:visible !important;}
+    body{background:#fff;color:#000;}
+    #screen-print{display:flex !important;}
+    .wrap{padding:0;}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <header id="topbar">
+    <span class="brand"><span class="ic">🔑</span><span><b>KART ID CHECK</b><small>SPEEDBAY &middot; DE HAARDT LOOKUP</small></span></span>
+    <span id="syncStatus" style="font-size:10px;font-weight:700;letter-spacing:.4px;text-align:right;max-width:42%;"></span>
+  </header>
+
+  <main>
+    <!-- SCAN -->
+    <section id="screen-scan" class="screen active">
+      <div id="camWrap">
+        <video id="cam" playsinline muted autoplay></video>
+        <div id="scanFrame"><div class="box"></div></div>
+        <div id="camHint">Point the camera at the QR code on the kart</div>
+        <div id="camError">
+          <p id="camErrorText">Camera access is unavailable here.</p>
+          <p style="font-size:12px;">If this page is open inside another app's viewer, try opening this same link directly in your phone's browser instead.</p>
+          <button class="btn small" id="camRetryBtn" type="button">Try camera again</button>
+        </div>
+      </div>
+      <div id="resultPanel">
+        <div id="resultIdle">Scanning…</div>
+        <div id="resultFound" style="display:none;">
+          <div id="resultKart"></div>
+          <div id="resultSerialLabel">DE HAARDT SERIAL</div>
+          <div id="resultSerial"></div>
+        </div>
+        <div id="resultUnknown" style="display:none;">
+          <div id="resultIdleUnknown" style="text-align:center;font-weight:800;color:#e6b45c;">Unrecognised QR code</div>
+          <div style="text-align:center;font-size:12px;color:var(--muted);margin-top:4px;">Not registered yet — add it from the Setup tab.</div>
+        </div>
+        <button id="scanAgainBtn" class="btn primary" type="button">SCAN NEXT</button>
+        <button id="manualToggleBtn" class="linklike noprint" type="button">Can't scan? Look up by kart number →</button>
+        <div id="manualBox" style="display:none;gap:8px;flex-direction:column;">
+          <input id="manualNum" type="text" inputmode="numeric" placeholder="Kart number, e.g. 14" autocomplete="off">
+          <button id="manualFindBtn" class="btn small" type="button">FIND</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETUP -->
+    <section id="screen-setup" class="screen">
+      <div class="wrap">
+        <div class="card">
+          <h2>REGISTER A KART</h2>
+          <div class="field">
+            <label for="setupNum">Kart number</label>
+            <input id="setupNum" type="text" inputmode="numeric" placeholder="e.g. 14" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="setupSerial">De Haardt serial number</label>
+            <input id="setupSerial" type="text" placeholder="e.g. DH-00123456" autocomplete="off">
+          </div>
+          <button id="saveKartBtn" class="btn green" type="button"><span class="ic">✓</span> SAVE &amp; GENERATE QR</button>
+          <div id="setupMsg" class="msg"></div>
+        </div>
+
+
+        <div class="card">
+          <h2>SHARED DATABASE</h2>
+          <p style="margin:0;font-size:12.5px;color:var(--muted);line-height:1.45;">
+            Karts are stored encrypted in <b>kart-data.json</b> on GitHub. Anyone can download that file,
+            but only people who know the passphrase can read it.
+          </p>
+          <div class="field">
+            <label for="dbPass">Passphrase</label>
+            <input id="dbPass" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="shared passphrase">
+          </div>
+          <button id="dbSyncBtn" class="btn primary" type="button"><span class="ic">⟳</span> SAVE PASSPHRASE &amp; UPDATE</button>
+          <button id="dbExportBtn" class="btn small" type="button" style="width:100%;">ADMIN: EXPORT ENCRYPTED FILE</button>
+          <div id="dbMsg" class="msg"></div>
+        </div>
+
+        <div class="card">
+          <h2>REGISTERED KARTS (<span id="kartCount">0</span>)</h2>
+          <div id="klist" class="klist"></div>
+        </div>
+
+        <div class="card">
+          <h2>RESET</h2>
+          <button id="wipeBtn" class="btn danger" type="button">ERASE ALL REGISTERED KARTS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINT -->
+    <section id="screen-print" class="screen">
+      <div class="wrap">
+        <div class="card noprint">
+          <h2>PRINT SHEET</h2>
+          <p style="margin:0;font-size:13px;color:var(--muted);">
+            One QR per kart. The kart number under each code is only for you to match it to the
+            right kart while sticking labels on — don't carry it over onto the kart itself.
+          </p>
+          <button id="printBtn" class="btn primary" type="button"><span class="ic">🖨</span> PRINT ALL</button>
+        </div>
+        <div id="printGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <nav id="tabs" class="noprint">
+    <button data-screen="scan" class="active" type="button"><span class="ic">📷</span>SCAN</button>
+    <button data-screen="setup" type="button"><span class="ic">⚙</span>SETUP</button>
+    <button data-screen="print" type="button"><span class="ic">🖨</span>PRINT</button>
+  </nav>
+</div>
+
+<!-- QR generator (used by Setup + Print). Decoder (jsQR) is loaded lazily,
+     only if the browser has no native BarcodeDetector — see script below. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+(function () {
+  'use strict';
+  function $(id) { return document.getElementById(id); }
+
+  /* ======================================================================
+     STORAGE
+     ====================================================================== */
+  var STORE_KEY = 'kartIdCheck_v1';
+  var karts = []; // [{ token, kartNumber, serial, createdAt }]
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      karts = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(karts)) karts = [];
+    } catch (e) { karts = []; }
+  }
+  function save() {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(karts)); } catch (e) {}
+  }
+  load();
+
+  function findByToken(token) {
+    for (var i = 0; i < karts.length; i++) if (karts[i].token === token) return karts[i];
+    return null;
+  }
+  function findByNumber(num) {
+    var n = String(num).trim();
+    for (var i = 0; i < karts.length; i++) if (String(karts[i].kartNumber).trim() === n) return karts[i];
+    return null;
+  }
+
+  function randomToken() {
+    var chars = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // no 0/O/1/I — easy to misread
+    var t = '';
+    for (var i = 0; i < 8; i++) t += chars[Math.floor(Math.random() * chars.length)];
+    return t;
+  }
+
+  /* ======================================================================
+     TABS
+     ====================================================================== */
+  var screens = ['scan', 'setup', 'print'];
+  function showScreen(name) {
+    screens.forEach(function (s) {
+      $('screen-' + s).classList.toggle('active', s === name);
+      var tabBtn = document.querySelector('#tabs button[data-screen="' + s + '"]');
+      if (tabBtn) tabBtn.classList.toggle('active', s === name);
+    });
+    if (name === 'setup') renderKlist();
+    if (name === 'print') renderPrintGrid();
+    if (name === 'scan') { renderResultIdle(); ensureCamera(); }
+    else stopCamera();
+  }
+  document.querySelectorAll('#tabs button').forEach(function (btn) {
+    btn.addEventListener('click', function () { showScreen(btn.getAttribute('data-screen')); });
+  });
+
+  /* ======================================================================
+     SETUP SCREEN
+     ====================================================================== */
+  var setupMsgTimer = null;
+  function showSetupMsg(text, kind) {
+    var el = $('setupMsg');
+    el.textContent = text || '';
+    el.className = 'msg' + (kind ? ' ' + kind : '');
+    clearTimeout(setupMsgTimer);
+    if (text) setupMsgTimer = setTimeout(function () { el.textContent = ''; el.className = 'msg'; }, 5000);
+  }
+
+  $('saveKartBtn').addEventListener('click', function () {
+    var num = $('setupNum').value.trim();
+    var serial = $('setupSerial').value.trim();
+    if (!num) { showSetupMsg('Enter a kart number.', 'err'); $('setupNum').focus(); return; }
+    if (!serial) { showSetupMsg('Enter the De Haardt serial number.', 'err'); $('setupSerial').focus(); return; }
+
+    var existing = findByNumber(num);
+    var token = existing ? existing.token : randomToken();
+    // make sure the token is actually unique
+    while (!existing && findByToken(token)) token = randomToken();
+
+    if (existing) {
+      existing.serial = serial;
+      existing.kartNumber = num;
+    } else {
+      karts.push({ token: token, kartNumber: num, serial: serial, createdAt: new Date().toISOString() });
+    }
+    save();
+    $('setupNum').value = '';
+    $('setupSerial').value = '';
+    showSetupMsg((existing ? 'Updated' : 'Saved') + ' kart ' + num + '. QR ready on the Print tab.', 'ok');
+    renderKlist();
+  });
+
+  function renderKlist() {
+    var list = $('klist');
+    $('kartCount').textContent = karts.length;
+    if (!karts.length) {
+      list.innerHTML = '<div style="color:var(--muted);font-size:13px;">No karts registered yet.</div>';
+      return;
+    }
+    var sorted = karts.slice().sort(function (a, b) {
+      return (parseFloat(a.kartNumber) || 0) - (parseFloat(b.kartNumber) || 0);
+    });
+    list.innerHTML = '';
+    sorted.forEach(function (k) {
+      var row = document.createElement('div');
+      row.className = 'krow';
+      row.innerHTML =
+        '<span class="kn">#' + escapeHtml(k.kartNumber) + '</span>' +
+        '<span class="ks">' + escapeHtml(k.serial) + '</span>' +
+        '<button class="del" type="button">REMOVE</button>';
+      row.querySelector('.del').addEventListener('click', function () {
+        karts = karts.filter(function (x) { return x.token !== k.token; });
+        save();
+        renderKlist();
+      });
+      list.appendChild(row);
+    });
+  }
+
+  $('wipeBtn').addEventListener('click', function () {
+    if (!karts.length) return;
+    if (!confirm('Erase all ' + karts.length + ' registered karts? This cannot be undone.')) return;
+    karts = [];
+    save();
+    renderKlist();
+    showSetupMsg('All karts erased.', 'warn');
+  });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  /* ======================================================================
+     PRINT SCREEN
+     ====================================================================== */
+  function renderPrintGrid() {
+    var grid = $('printGrid');
+    grid.innerHTML = '';
+    if (!karts.length) {
+      grid.innerHTML = '<div style="color:var(--muted);font-size:13px;">No karts registered yet — add some on the Setup tab first.</div>';
+      return;
+    }
+    var sorted = karts.slice().sort(function (a, b) {
+      return (parseFloat(a.kartNumber) || 0) - (parseFloat(b.kartNumber) || 0);
+    });
+    sorted.forEach(function (k) {
+      var tile = document.createElement('div');
+      tile.className = 'ptile';
+      var qrDiv = document.createElement('div');
+      qrDiv.className = 'qr';
+      tile.appendChild(qrDiv);
+      var label = document.createElement('div');
+      label.className = 'label';
+      label.textContent = 'Kart ' + k.kartNumber;
+      tile.appendChild(label);
+      grid.appendChild(tile);
+      try {
+        new QRCode(qrDiv, { text: k.token, width: 120, height: 120, correctLevel: QRCode.CorrectLevel.M });
+      } catch (e) {
+        qrDiv.textContent = k.token;
+      }
+    });
+  }
+
+  $('printBtn').addEventListener('click', function () { window.print(); });
+
+  /* ======================================================================
+     SCAN SCREEN — result rendering
+     ====================================================================== */
+  function renderResultIdle() {
+    $('resultPanel').className = '';
+    $('resultIdle').style.display = '';
+    $('resultFound').style.display = 'none';
+    $('resultUnknown').style.display = 'none';
+    $('scanAgainBtn').style.display = 'none';
+    $('resultIdle').textContent = 'Scanning…';
+  }
+  function renderResultFound(k) {
+    $('resultPanel').className = 'ok';
+    $('resultIdle').style.display = 'none';
+    $('resultUnknown').style.display = 'none';
+    $('resultFound').style.display = '';
+    $('resultKart').textContent = 'KART ' + k.kartNumber;
+    $('resultSerial').textContent = k.serial;
+    $('scanAgainBtn').style.display = '';
+    vibrate(40); beep(880, 110);
+  }
+  function renderResultUnknown() {
+    $('resultPanel').className = 'unknown';
+    $('resultIdle').style.display = 'none';
+    $('resultFound').style.display = 'none';
+    $('resultUnknown').style.display = '';
+    $('scanAgainBtn').style.display = '';
+    vibrate([30, 60, 30]); beep(300, 220);
+  }
+
+  $('scanAgainBtn').addEventListener('click', function () {
+    renderResultIdle();
+    resumeScanning();
+  });
+
+  $('manualToggleBtn').addEventListener('click', function () {
+    var box = $('manualBox');
+    box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+    if (box.style.display === 'flex') $('manualNum').focus();
+  });
+  function manualFind() {
+    var k = findByNumber($('manualNum').value);
+    if (k) renderResultFound(k); else renderResultUnknown();
+  }
+  $('manualFindBtn').addEventListener('click', manualFind);
+  $('manualNum').addEventListener('keydown', function (e) { if (e.key === 'Enter') manualFind(); });
+
+  /* ======================================================================
+     FEEDBACK — haptics + a short beep
+     ====================================================================== */
+  function vibrate(p) { try { if (navigator.vibrate) navigator.vibrate(p); } catch (e) {} }
+  var audioCtx = null;
+  function getCtx() {
+    if (audioCtx) return audioCtx;
+    try { var AC = window.AudioContext || window.webkitAudioContext; if (AC) audioCtx = new AC(); } catch (e) {}
+    return audioCtx;
+  }
+  document.addEventListener('pointerdown', function unlock() {
+    var ctx = getCtx();
+    if (ctx && ctx.state === 'suspended') ctx.resume().catch(function () {});
+    document.removeEventListener('pointerdown', unlock);
+  }, { once: true });
+  function beep(freq, durMs) {
+    var ctx = getCtx(); if (!ctx) return;
+    try {
+      var osc = ctx.createOscillator(), gain = ctx.createGain();
+      osc.type = 'sine'; osc.frequency.value = freq;
+      var t0 = ctx.currentTime;
+      gain.gain.setValueAtTime(0.0001, t0);
+      gain.gain.exponentialRampToValueAtTime(0.15, t0 + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + durMs / 1000);
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.start(t0); osc.stop(t0 + durMs / 1000 + 0.02);
+    } catch (e) {}
+  }
+
+  /* ======================================================================
+     CAMERA + QR DECODE
+     (tries the native BarcodeDetector first; falls back to the jsQR
+     library loaded from a CDN only if the browser doesn't support it)
+     ====================================================================== */
+  var videoEl = $('cam');
+  var canvasEl = document.createElement('canvas');
+  var ctx2d = canvasEl.getContext('2d', { willReadFrequently: true });
+  var stream = null;
+  var rafId = null;
+  var scanning = false;
+  var lastToken = null;
+  var lastTokenAt = 0;
+  var detector = null;
+  var jsQRLoadPromise = null;
+
+  function loadJsQR() {
+    if (window.jsQR) return Promise.resolve();
+    if (jsQRLoadPromise) return jsQRLoadPromise;
+    jsQRLoadPromise = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js';
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error('jsQR failed to load')); };
+      document.head.appendChild(s);
+    });
+    return jsQRLoadPromise;
+  }
+
+  function showCamError(msg) {
+    $('camErrorText').textContent = msg;
+    $('camError').classList.add('show');
+  }
+  function hideCamError() {
+    $('camError').classList.remove('show');
+  }
+
+  function ensureCamera() {
+    if (stream) { resumeScanning(); return; }
+    if (!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)) {
+      showCamError('This browser view does not allow camera access.');
+      return;
+    }
+    hideCamError();
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+      .then(function (s) {
+        stream = s;
+        videoEl.srcObject = s;
+        videoEl.play().catch(function () {});
+        videoEl.addEventListener('loadedmetadata', function onMeta() {
+          videoEl.removeEventListener('loadedmetadata', onMeta);
+          canvasEl.width = videoEl.videoWidth || 640;
+          canvasEl.height = videoEl.videoHeight || 480;
+        });
+        resumeScanning();
+      })
+      .catch(function (err) {
+        showCamError(
+          'Camera permission was blocked or unavailable (' + (err && err.name ? err.name : 'error') + '). ' +
+          'Try allowing camera access, or open this link directly in your phone\u2019s browser.'
+        );
+      });
+  }
+
+  function stopCamera() {
+    scanning = false;
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = null;
+    if (stream) {
+      stream.getTracks().forEach(function (t) { t.stop(); });
+      stream = null;
+    }
+  }
+
+  function resumeScanning() {
+    scanning = true;
+    lastToken = null;
+    if (!rafId) tick();
+  }
+
+  if (!('BarcodeDetector' in window)) {
+    // kick off the fallback load in the background; scanning just waits for it
+  } else {
+    try { detector = new window.BarcodeDetector({ formats: ['qr_code'] }); }
+    catch (e) { detector = null; }
+  }
+
+  function handleDecoded(text) {
+    var now = Date.now();
+    if (text === lastToken && now - lastTokenAt < 2000) return; // debounce repeats
+    lastToken = text;
+    lastTokenAt = now;
+    scanning = false;
+
+    var k = findByToken(text);
+    if (k) renderResultFound(k); else renderResultUnknown();
+  }
+
+  function tick() {
+    rafId = requestAnimationFrame(tick);
+    if (!scanning || !stream || videoEl.readyState < 2) return;
+    if (!canvasEl.width || !canvasEl.height) return;
+
+    if (detector) {
+      detector.detect(videoEl).then(function (codes) {
+        if (codes && codes.length) handleDecoded(codes[0].rawValue);
+      }).catch(function () {});
+      return;
+    }
+
+    // Fallback path via jsQR — load it once, then decode frames.
+    if (!window.jsQR) {
+      loadJsQR().catch(function () {
+        showCamError('QR decoding library failed to load. Check your connection and try again, or use manual lookup below.');
+      });
+      return;
+    }
+    ctx2d.drawImage(videoEl, 0, 0, canvasEl.width, canvasEl.height);
+    var imgData;
+    try { imgData = ctx2d.getImageData(0, 0, canvasEl.width, canvasEl.height); }
+    catch (e) { return; }
+    var code = window.jsQR(imgData.data, imgData.width, imgData.height);
+    if (code && code.data) handleDecoded(code.data);
+  }
+
+  $('camRetryBtn').addEventListener('click', function () { ensureCamera(); });
+
+
+  /* ======================================================================
+     SHARED ENCRYPTED DATABASE (kart-data.json on GitHub Pages)
+     ====================================================================== */
+  var PASS_KEY = 'kartIdCheck_pass';
+  var SYNC_KEY = 'kartIdCheck_lastSync';
+  var lastSyncAttempt = 0;
+
+  function getPass() { try { return localStorage.getItem(PASS_KEY) || ''; } catch (e) { return ''; } }
+  function setPass(p) { try { localStorage.setItem(PASS_KEY, p); } catch (e) {} }
+
+  function b64enc(buf) {
+    var b = new Uint8Array(buf), s = '';
+    for (var i = 0; i < b.length; i++) s += String.fromCharCode(b[i]);
+    return btoa(s);
+  }
+  function b64dec(str) {
+    var s = atob(str), b = new Uint8Array(s.length);
+    for (var i = 0; i < s.length; i++) b[i] = s.charCodeAt(i);
+    return b;
+  }
+  async function deriveKey(pass, salt) {
+    var km = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: salt, iterations: 200000, hash: 'SHA-256' },
+      km, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+  }
+  async function encryptDb(pass, obj) {
+    var salt = crypto.getRandomValues(new Uint8Array(16));
+    var iv = crypto.getRandomValues(new Uint8Array(12));
+    var key = await deriveKey(pass, salt);
+    var ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv }, key,
+      new TextEncoder().encode(JSON.stringify(obj)));
+    return JSON.stringify({ v: 1, salt: b64enc(salt), iv: b64enc(iv), data: b64enc(ct) });
+  }
+  async function decryptDb(pass, text) {
+    var p = JSON.parse(text);
+    var key = await deriveKey(pass, b64dec(p.salt));
+    var pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64dec(p.iv) }, key, b64dec(p.data));
+    return JSON.parse(new TextDecoder().decode(pt));
+  }
+
+  var dbMsgTimer = null;
+  function showDbMsg(text, kind) {
+    var el = $('dbMsg');
+    el.textContent = text || '';
+    el.className = 'msg' + (kind ? ' ' + kind : '');
+    clearTimeout(dbMsgTimer);
+    if (text) dbMsgTimer = setTimeout(function () { el.textContent = ''; el.className = 'msg'; }, 7000);
+  }
+
+  function showSyncStatus() {
+    var el = $('syncStatus');
+    var t = null;
+    try { t = localStorage.getItem(SYNC_KEY); } catch (e) {}
+    if (!getPass()) { el.textContent = 'No passphrase set'; el.style.color = '#e6b45c'; return; }
+    if (!t) { el.textContent = 'Not synced yet'; el.style.color = '#e6b45c'; return; }
+    var d = new Date(parseInt(t, 10));
+    el.textContent = karts.length + ' karts · synced ' + d.toTimeString().slice(0, 5);
+    el.style.color = '#8bd9a6';
+  }
+
+  async function syncFromServer(silent) {
+    lastSyncAttempt = Date.now();
+    var pass = getPass();
+    if (!pass) { if (!silent) showDbMsg('Enter the passphrase first.', 'err'); showSyncStatus(); return; }
+    if (!(window.crypto && crypto.subtle)) {
+      if (!silent) showDbMsg('This browser cannot decrypt here (needs https).', 'err');
+      return;
+    }
+    try {
+      var res = await fetch('kart-data.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      var text = await res.text();
+      var db = await decryptDb(pass, text);
+      if (!db || !Array.isArray(db.karts)) throw new Error('bad file');
+      karts = db.karts;
+      save();
+      try { localStorage.setItem(SYNC_KEY, String(Date.now())); } catch (e) {}
+      showSyncStatus();
+      if ($('screen-setup').classList.contains('active')) renderKlist();
+      if (!silent) showDbMsg('Updated: ' + karts.length + ' karts loaded.', 'ok');
+    } catch (e) {
+      if (e && e.name === 'OperationError') {
+        if (!silent) showDbMsg('Wrong passphrase.', 'err');
+        else { var s = $('syncStatus'); s.textContent = 'Wrong passphrase'; s.style.color = '#ff8c7c'; }
+      } else {
+        if (!silent) showDbMsg('Could not reach the database (' + (e && e.message ? e.message : 'error') + '). Using the saved list.', 'warn');
+        else showSyncStatus();
+      }
+    }
+  }
+
+  $('dbSyncBtn').addEventListener('click', function () {
+    var p = $('dbPass').value.trim();
+    if (p) setPass(p);
+    syncFromServer(false);
+  });
+
+  $('dbExportBtn').addEventListener('click', async function () {
+    var pass = $('dbPass').value.trim() || getPass();
+    if (!pass) { showDbMsg('Type the passphrase first.', 'err'); return; }
+    if (!karts.length) { showDbMsg('No karts to export.', 'err'); return; }
+    if (!(window.crypto && crypto.subtle)) { showDbMsg('This browser cannot encrypt here (needs https).', 'err'); return; }
+    try {
+      var payload = {
+        updatedAt: new Date().toISOString(),
+        karts: karts.map(function (k) { return { token: k.token, kartNumber: k.kartNumber, serial: k.serial, createdAt: k.createdAt }; })
+      };
+      var text = await encryptDb(pass, payload);
+      var blob = new Blob([text], { type: 'application/json' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url; a.download = 'kart-data.json';
+      document.body.appendChild(a); a.click();
+      setTimeout(function () { a.remove(); URL.revokeObjectURL(url); }, 3000);
+      showDbMsg('Exported ' + karts.length + ' karts. Upload kart-data.json to GitHub.', 'ok');
+    } catch (e) {
+      showDbMsg('Export failed.', 'err');
+    }
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && Date.now() - lastSyncAttempt > 60000) syncFromServer(true);
+  });
+
+  /* ======================================================================
+     INIT
+     ====================================================================== */
+  renderResultIdle();
+  $('dbPass').value = getPass();
+  showSyncStatus();
+  syncFromServer(true);
+  ensureCamera();
+})();
+</script>
+</body>
+</html>
